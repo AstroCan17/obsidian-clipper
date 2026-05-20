@@ -3,7 +3,8 @@
 	"version": "1.6.2",
 	"description": "Official web clipper for Obsidian.",
 	"bin": {
-		"obsidian-clipper": "./dist/cli.cjs"
+		"obsidian-clipper": "./dist/cli.cjs",
+		"site-clipper": "./dist/site-clipper.cjs"
 	},
 	"files": [
 		"dist"
@@ -23,6 +24,7 @@
 		"build:safari": "webpack --env BROWSER=safari --mode production",
 		"build": "npm run build:chrome && npm run build:firefox && npm run build:safari",
 		"build:cli": "node scripts/build-cli.mjs",
+		"build:site-clipper": "node scripts/build-site-clipper.mjs",
 		"build:api": "node scripts/build-api.mjs",
 		"dev": "npm run dev:chrome",
 		"test": "vitest run",
